@@ -14,7 +14,7 @@ export default function ProductsList() {
     { id: 2, name: 'Banana', price: 1, inStock: false }, 
     { id: 3, name: 'Cherry', price: 2, inStock: true }
   ]);
-
+  
   return (
         <table border='1px' >
             <caption>Product Table</caption>
@@ -24,8 +24,8 @@ export default function ProductsList() {
                     <th>Price</th>
                     <th>Status</th>
                 </tr>
-                {plist.map(p => <Product key={p.id} product={p} 
-                    toggleStock={() => setPlist(plist => plist.map(p1 => p1.id == p.id ? toggleStock(p1) : p1) ) } />)}        
+                {plist.map(p => <Product key={p.id} {...p} 
+                    toggleStock={() => setPlist(plist.map(p1 => p1.id == p.id ? toggleStock(p1) : p1) )} />)}        
             </tbody>    
         </table>
     )
