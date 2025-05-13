@@ -12,12 +12,6 @@ dist
 dist-ssr
 *.local
 
-lab3
-lab4
-lab5
-wap-react-demo
-test_react
-
 # Editor directories and files
 .vscode/*
 !.vscode/extensions.json
